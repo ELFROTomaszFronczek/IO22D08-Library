@@ -1,4 +1,4 @@
-div class="content "><p>Podczas przeszukiwania internetu znalazłem całkiem ciekawą płytkę rozwojową która może posłużyć za dobrą bazę do sterownika automatyki. Jest to płytka o nazwie IO22D08 wiadomej chińskiej produkcji.</p>
+<div class="content "><p>Podczas przeszukiwania internetu znalazłem całkiem ciekawą płytkę rozwojową która może posłużyć za dobrą bazę do sterownika automatyki. Jest to płytka o nazwie IO22D08 wiadomej chińskiej produkcji.</p>
 <p style="text-align: center;"><img class="cimg" src="img/IO22D08.jpg" alt=""></p>
 <p style="text-align: justify;">&nbsp;Niestety jedyne znalezione oprogramowanie tej płytki po długich poszukiwaniach było dalekie od zadowalającego. dlatego na jego bazie postanowiłem napisać swoją "bibliotekę"&nbsp; do obsługi płytki.</p>
 <p style="text-align: justify;">Płytka przystosowana jest do montażu z płytką Adruino Pro Mini lecz nic nie szkodzi aby np testowo podłączyć też zamiast niej bardziej popularne Arduino Nano.&nbsp; W tym celu zwieramy kawałkami przewodów wyjście D10 do A7 i D11do A6 i wkładamy jak na rysunku:</p>
@@ -48,7 +48,10 @@ div class="content "><p>Podczas przeszukiwania internetu znalazłem całkiem cie
 <p style="text-align: justify;"><code>setLCDTime(hour, minute,dots );</code> - wyświetla godzinę i minutę lub minutę i sekunde wg uznania oraz opcjonalnie dwukropek</p>
 <p style="text-align: justify;"><br><code>setLCDbyInt(intValue);</code> - wyświetla liczbę całkowitą od -999 do 9999<br><br>Można także zdefiniować własne znaki. Aby to zrobić najpierw zobaczmy który segment za co odpowiada:</p>
 <p style="text-align: justify;"><code>&nbsp;&nbsp;&nbsp; --A--</code><br><code>&nbsp;&nbsp;&nbsp; F---B</code><br><code>&nbsp;&nbsp;&nbsp; --G--</code><br><code>&nbsp;&nbsp;&nbsp; E---C</code><br><code>&nbsp;&nbsp;&nbsp; --D--</code></p>
-<p style="text-align: justify;"><code style="line-height: 0;">&nbsp; &nbsp; __&nbsp; __&nbsp;&nbsp; __&nbsp; __<br>&nbsp;&nbsp; |__||__|.|__||__|<br>&nbsp;&nbsp; |__||__|'|__||__|</code></p>
+<p style="text-align: justify;"><code style="line-height: 0;">
+&nbsp; &nbsp; __&nbsp; __&nbsp;&nbsp; __&nbsp; __<br/>
+&nbsp;&nbsp; |__||__|.|__||__|<br/>
+&nbsp;&nbsp; |__||__|'|__||__|</code></p>
 <p style="text-align: justify;">Każdy z 4 elementów wyświetlacza&nbsp; składa się z 7 segmentów kolejno A,B,C,D,E,F,G</p>
 <p style="text-align: justify;">gdzie A,B,C to kolejne bity maski dla kodowanego znaku. A to najmniej ważny bit- nr.0&nbsp; G - najbardziej nr.6 przykładowo w zapisie binarnym będzie to wyglądać tak 0bGFEDCBA</p>
 <p style="text-align: justify;">np aby ustawić na wyświetlaczu cyfrę 1 musimy zapalić segmenty B i C da to cyfrę 0b00000110</p>
