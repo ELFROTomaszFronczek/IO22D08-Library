@@ -61,8 +61,4 @@
 <p style="text-align: justify;"><code>setRelay(relayNo);</code> - włącza wybrany przekaźnik. Numeracja zaczyna się od 1. Przekaźnik pierwszy&nbsp; wybieramy 1 drugi wybieramy 2</p>
 <p style="text-align: justify;"><code>resetRelay(relayNo);</code> - wyłącza wybrany przekaźnik.<br><br><code>setRelayAndOffRest(relayNo);</code>&nbsp; - włącza wybrany przekaźnik i wyłącza pozostałe<br><br><code>byte getRelay(relayNo);</code> - zwraca stan wybranego przekaźnika 0 lub 1<br><br><code>clearRelays();</code>&nbsp; - wyłącza wszystkie przekaźniki</p>
 <p style="text-align: justify;">&nbsp;Jeżeli numeracja od 1 nam nie odpowiada i chcemy numerować od 0 nie ma problemu. Należy w pliku <code>lcdAndRelays.h</code> znaleźć i usunąć wszystkie linie z kodem <code>relayNo--;</code></p>
-<p style="text-align: justify;">&nbsp;</p>
-<p style="text-align: justify;">&nbsp;</p>
-<hr>
-<p style="text-align: justify;">&nbsp;</p>
-<p style="text-align: justify;">Kod źródłowy można pobrać stąd: <a href="download/IO22D08.zip">IO22D08.zip</a> rozmiar ok. 7kB</p></div>
+
