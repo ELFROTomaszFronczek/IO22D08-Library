@@ -48,7 +48,8 @@
 <p style="text-align: justify;"><code>setLCDTime(hour, minute,dots );</code> - wyświetla godzinę i minutę lub minutę i sekunde wg uznania oraz opcjonalnie dwukropek</p>
 <p style="text-align: justify;"><br><code>setLCDbyInt(intValue);</code> - wyświetla liczbę całkowitą od -999 do 9999<br><br>Można także zdefiniować własne znaki. Aby to zrobić najpierw zobaczmy który segment za co odpowiada:</p>
 <p style="text-align: justify;"><img class="cimg" src="img/7seg.png" alt=""></p>
-<p><span style="line-height: 0;font-family: 'Courier New', monospace; ">&nbsp; &nbsp; __&nbsp; __&nbsp;&nbsp; __&nbsp; __<br/>&nbsp;&nbsp; |__||__|.|__||__|<br/>&nbsp;&nbsp; |__||__|'|__||__|</span></p>
+<p style="text-align: justify;"><img class="cimg" src="img/4x7seg.png" alt=""></p>
+
 <p style="text-align: justify;">Każdy z 4 elementów wyświetlacza&nbsp; składa się z 7 segmentów kolejno A,B,C,D,E,F,G</p>
 <p style="text-align: justify;">gdzie A,B,C to kolejne bity maski dla kodowanego znaku. A to najmniej ważny bit- nr.0&nbsp; G - najbardziej nr.6 przykładowo w zapisie binarnym będzie to wyglądać tak 0bGFEDCBA</p>
 <p style="text-align: justify;">np aby ustawić na wyświetlaczu cyfrę 1 musimy zapalić segmenty B i C da to cyfrę 0b00000110</p>
