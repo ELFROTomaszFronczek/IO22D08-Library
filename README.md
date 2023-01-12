@@ -3,7 +3,7 @@
 <p style="text-align: justify;">&nbsp;Niestety jedyne znalezione oprogramowanie tej płytki po długich poszukiwaniach było dalekie od zadowalającego. dlatego na jego bazie postanowiłem napisać swoją "bibliotekę"&nbsp; do obsługi płytki.</p>
 <p style="text-align: justify;">Płytka przystosowana jest do montażu z płytką Adruino Pro Mini lecz nic nie szkodzi aby np testowo podłączyć też zamiast niej bardziej popularne Arduino Nano.&nbsp; W tym celu zwieramy kawałkami przewodów wyjście D10 do A7 i D11do A6 i wkładamy jak na rysunku:</p>
 <p style="text-align: justify;">&nbsp;</p>
-<p style="text-align: center;"><img class="cimg" src="https://elfro.pl/img/IO22D08-NANO.jpg" alt="" width="600" height="351"></p>
+<p style="text-align: center;"><img class="cimg" src="img/IO22D08-NANO.jpg" alt="" width="600" height="351"></p>
 <p style="text-align: justify;">Oprogramowanie.</p>
 <p style="text-align: justify;">W kodzie źródłowym zawarte są wszystkie definicje i procedury niezbędne do obsługi pytki.&nbsp;</p>
 <p style="text-align: justify;">Na samym początku musimy zdefiniować jakie Arduino wkładamy. Jeżeli jest to Nano pozostawiamy linię <code><span style="color: #339966;">#define</span> NANO_AS_MINI </code>a jeżeli jest to oryginalne MINI - usuwamy ją.</p>
