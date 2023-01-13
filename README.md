@@ -45,9 +45,9 @@ dots - optional parameter - displays a colon in the middle.
 the parameter is the text to be entered, e.g. <code>setLCDtext("TEST");</code>
 &nbsp;
 <code>setLCDTime(hour, minute,dots );</code> - displays hour and minute or minute and second as desired, and optionally a colon
-<br><code>setLCDbyInt(intValue);</code> - displays an integer from -999 to 9999<br><br>You can also define your own characters. To do this, let's first see which segment is responsible for what:
-<img class="cimg" src="img/7seg.png" alt="">
-<img class="cimg" src="img/4x7seg.png" alt="">
+<br><code>setLCDbyInt(intValue);</code> - displays an integer from -999 to 9999<br><br>You can also define your own characters. To do this, let's first see which segment is responsible for what:<br>
+<img class="cimg" src="img/7seg.png" alt=""><br>
+<img class="cimg" src="img/4x7seg.png" alt=""><br>
 
 Each of the 4 elements of the display consists of 7 segments A, B, C, D, E, F, G in turn, where A, B, C are the subsequent bits of the mask for the coded character. A is the least important bit - no.0&nbsp; G - most No. 6, for example in binary it will look like this 0bGFEDCBA
 e.g. to set the number 1 on the display, we must light the segments B and C, this will give the number 0b00000110
