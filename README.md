@@ -61,4 +61,4 @@ I have defined several functions to handle relays:
 <code>setRelay(relayNo);</code> - activates the selected relay. Numbering starts with 1. Relay one&nbsp; we choose 1, the second we choose 2
 <code>resetRelay(relayNo);</code> - disables the selected relay.<br><br><code>setRelayAndOffRest(relayNo);</code>&nbsp; - enables the selected relay and disables the others<br><br><code>byte getRelay(relayNo);</code> - returns the status of the selected relay 0 or 1<br><br><code>clearRelays();</code >&nbsp; - turns off all relays
 &nbsp;If numbering from 1 does not suit us and we want to number from 0, no problem. In the <code>lcdAndRelays.h</code> file, find and remove all lines with <code>relayNo--;</code>
-  (c)'2021 Tomasz Fronczek
+<h3>  (c)'2021 Tomasz Fronczek</h3>
