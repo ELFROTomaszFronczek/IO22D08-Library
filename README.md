@@ -27,7 +27,6 @@ where value 0 means first input(IN1) or button(K1)  etc. 0-7 for inputs and 0-3 
 <strong>2. LCD support</strong>
 &nbsp;LCD turn on or off&nbsp; by defining 1 or 0 in this constant:
 <code><pre><span style="color: #5e6d03;">#define</span> <span style="color: #000000;">USE_LCD</span> <span style="color: #000000;"> 1</span></code>
-
 </pre>
 If the board is to support the LCD display, we have to refresh it often because the digit segments are not displayed permanently - it would require a bit more electronics, which is known not to be handy in mass production "at a cheap price".
 The display can be operated in a loop loop or using a timer such as FlexiTimer2.h, which I used in the example.
