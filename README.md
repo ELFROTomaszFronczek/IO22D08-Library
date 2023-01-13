@@ -1,9 +1,9 @@
 Podczas przeszukiwania internetu znalazłem całkiem ciekawą płytkę rozwojową która może posłużyć za dobrą bazę do sterownika automatyki. Jest to płytka o nazwie IO22D08 wiadomej chińskiej produkcji.
-<p style="text-align: center;"><img class="cimg" src="img/IO22D08.jpg" alt="">
+<img class="cimg" src="img/IO22D08.jpg" >
 &nbsp;Niestety jedyne znalezione oprogramowanie tej płytki po długich poszukiwaniach było dalekie od zadowalającego. dlatego na jego bazie postanowiłem napisać swoją "bibliotekę"&nbsp; do obsługi płytki.
 Płytka przystosowana jest do montażu z płytką Adruino Pro Mini lecz nic nie szkodzi aby np testowo podłączyć też zamiast niej bardziej popularne Arduino Nano.&nbsp; W tym celu zwieramy kawałkami przewodów wyjście D10 do A7 i D11do A6 i wkładamy jak na rysunku:
 &nbsp;
-<p style="text-align: center;"><center><img class="cimg" src="img/IO22D08-NANO.jpg" alt="" width="600" height="351"></center>
+<img class="cimg" src="img/IO22D08-NANO.jpg">
 Oprogramowanie.
 W kodzie źródłowym zawarte są wszystkie definicje i procedury niezbędne do obsługi pytki.&nbsp;
 Na samym początku musimy zdefiniować jakie Arduino wkładamy. Jeżeli jest to Nano pozostawiamy linię <code><span style="color: #339966;">#define</span> NANO_AS_MINI </code>a jeżeli jest to oryginalne MINI - usuwamy ją.
