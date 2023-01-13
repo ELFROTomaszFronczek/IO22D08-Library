@@ -14,13 +14,13 @@ In the <code>loop()</code> we put the following functions:
 The first one reads the state of the inputs, the second the state of the buttons. The program filters the read data by eliminating contact vibrations by introducing a 50ms loop for vibration elimination, therefore these functions should be performed quite often. If we added them to the timer, e.g. using flexiTimer2 as in LCD, there could be a problem with detecting and detecting the edge (Press, Release) - if we don't need it, we use only the 1/0 state, of course, you can put it in the flexiTimer procedure.
 the data read may have values
 <ul>
-<li>0 - input not connected or button not pressed. IO_LOW</li> value
-<li>1 - input connected to ground or pressed button. IO_HIGH</li> value
-<li>2 - moment of input short-circuit / button pressing&nbsp; - rising edge. The IO_RISING</li> value
-<li >3 - the moment of opening the input / releasing the button&nbsp; - falling edge. The IO_FALLING</li> value
+  <li>0 - input not connected or button not pressed. IO_LOW value </li>
+<li>1 - input connected to ground or pressed button. IO_HIGH value</li>
+<li>2 - moment of input short-circuit / button pressing&nbsp; - rising edge. The IO_RISING value</li>
+<li >3 - the moment of opening the input / releasing the button&nbsp; - falling edge. The IO_FALLING value</li>
 </ul>
-&nbsp;
-values are read from the inValues and keysValues tables, e.g.:
+
+Values are read from the inValues and keysValues tables, e.g.:
 <pre>&nbsp;byte in1=inValues[0]; <br>&nbsp;byte key1=keysValues[0]; </pre>
 where value 0 means first input(IN1) or button(K1)&nbsp; etc. up to 7 for inputs and up to 3 for buttons 7 - input IN8. 3- K4 button.
 &nbsp;
