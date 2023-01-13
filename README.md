@@ -14,7 +14,7 @@ In the <code>loop()</code> we put the following functions:
 The first one reads the state of the inputs, the second the state of the buttons. The program filters the read data by eliminating contact vibrations by introducing a 50ms loop for vibration elimination, therefore these functions should be performed quite often. If we added them to the timer, e.g. using flexiTimer2 as in LCD, there could be a problem with detecting and detecting the edge (Press, Release) - if we don't need it, we use only the 1/0 state, of course, you can put it in the flexiTimer procedure.
 the data read may have values
 <ul>
-  <li>0 - input not connected or button not pressed. IO_LOW value </li>
+<li>0 - input not connected or button not pressed. IO_LOW value </li>
 <li>1 - input connected to ground or pressed button. IO_HIGH value</li>
 <li>2 - moment of input short-circuit / button pressing&nbsp; - rising edge. The IO_RISING value</li>
 <li >3 - the moment of opening the input / releasing the button&nbsp; - falling edge. The IO_FALLING value</li>
@@ -23,10 +23,10 @@ the data read may have values
 Values are read from the inValues and keysValues tables, e.g.:
 <pre>&nbsp;byte in1=inValues[0]; <br>&nbsp;byte key1=keysValues[0]; </pre>
 where value 0 means first input(IN1) or button(K1)  etc. 0-7 for inputs and 0-3 for buttons. 
-&nbsp;<br>
-<strong>2. LCD support</strong>
+&nbsp;<br>&nbsp;<br>
+<strong>2. LCD support</strong><br>
 &nbsp;LCD turn on or off&nbsp; by defining 1 or 0 in this constant:
-<code><pre><span style="color: #5e6d03;">#define</span> <span style="color: #000000;">USE_LCD</span> <span style="color: #000000;"> 1</span></code>
+<pre><code><span style="color: #5e6d03;">#define</span> <span style="color: #000000;">USE_LCD</span> <span style="color: #000000;"> 1</span></code>
 </pre>
 If the board is to support the LCD display, we have to refresh it often because the digit segments are not displayed permanently - it would require a bit more electronics, which is known not to be handy in mass production "at a cheap price".
 The display can be operated in a loop loop or using a timer such as FlexiTimer2.h, which I used in the example.
@@ -52,7 +52,7 @@ the parameter is the text to be entered, e.g. <code>setLCDtext("TEST");</code>
 Each of the 4 elements of the display consists of 7 segments A, B, C, D, E, F, G in turn, where A, B, C are the subsequent bits of the mask for the coded character. A is the least important bit - no.0&nbsp; G - most No. 6, for example in binary it will look like this 0bGFEDCBA
 e.g. to set the number 1 on the display, we must light the segments B and C, this will give the number 0b00000110
 The mask is the negation of this digit because the active display segment is driven in negation - it is lit when the bit is set to 0
-eg: <code>mask= ~( 0b GFEDCBA);<code>
+eg: <code>mask= ~( 0b GFEDCBA);</code>
   
 The eighth bit is responsible for the dot, actually the colon, and is only active for the second segment. Therefore, dot is not supported.<br><br><code>setCustomChar(segment, mask, dots);</code> - defines custom character by mask in selected segment with optional colon.<br><br><code> byte setCustomChar(segment,&nbsp; a,&nbsp; b,&nbsp; c, d,&nbsp; e,&nbsp; f,&nbsp; g ,&nbsp; dots );</code> - defines a custom character where we can choose which segments abcdefg&nbsp ; are to be enabled 0- disabled 1- enabled.<br>Additionally, the function returns the calculated mask, e.g. for later use.
 &nbsp;
