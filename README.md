@@ -1,4 +1,4 @@
-Arduino - IO22D08 basics library (rev. February 2021)
+<h1>Arduino - IO22D08 basics library (rev. February 2021)</h1>
 While searching the internet, I found quite an interesting development board that can be used as a good basis for an automation controller. It is a board called IO22D08 of known Chinese production.
 <img src="img/IO22D08.jpg" >
 Unfortunately, the only software found for this board after a long search was far from satisfactory. Therefore, based on it, I decided to write my simple "library" to handle the board.
